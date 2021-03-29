@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-</head>
-<body>
+{% extends 'portfolio/base.html %}
+
+{% block content %}
     <h1>Hello blog!</h1>
     <h2>Cherif has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2>
     {% for blog in blogs %}
@@ -12,5 +8,4 @@
     <h5>{{ blog.date|date:'d M Y'|upper }}</h5>
     <p>{{ blog.description|striptags|truncatechars:100 }}</p>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
