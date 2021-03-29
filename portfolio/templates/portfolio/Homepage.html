@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>This the front page</h1>
+    <br>
     <a href="{% static 'portfolio/CV - BESSAI Mohamed Cherif.pdf' %}">Resume</a>
+    <br>
+    <a href="{% url 'blog:all_blogs' %}">Blog</a>
+    <br>
     <img src="{% static 'portfolio/20180121_172420.jpg' %}">
     {% for project in projects %}
     <h2>{{ project.title }}</h2>
